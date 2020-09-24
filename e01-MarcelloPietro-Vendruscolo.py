@@ -17,7 +17,7 @@ def divideFirstFloatBySecondFloat(first_float, second_float):
 hardCoded_string = "One half is 50%"
 printString(hardCoded_string)
 
-a_integer = -4
+a_integer = 10
 b_integer = 3
 substractFirstIntFromSecondInt(a_integer, b_integer)
 
