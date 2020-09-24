@@ -1,20 +1,26 @@
 #Exercise 01: Output
 #Author: Marcello Pietro Vendruscolo
 
-def printHardCodedString():
-    first_str = "One half is 50%"
-    print(first_str)
+def printString(a_string):
+    print(a_string)
 
-def printSubstractionTwoIntegers(integer_a, integer_b):
-    difference = integer_a - integer_b
-    second_str = "The difference between {first_int} and {second_int} is {result}".format(first_int=integer_a, second_int=integer_b, result=difference)
-    print(second_str)
+def substractFirstIntFromSecondInt(first_int, second_int):
+    difference = first_int - second_int
+    str_printOut = "The difference between {first_int} and {second_int} is {result}".format(first_int=first_int, second_int=second_int, result=difference)
+    print(str_printOut)
 
-def printDivisionTwoFloats(float_a, float_b):
-    division = float_a / float_b
-    third_str = "{first_float:f} / {second_float:f} is {result:f}".format(first_float=float_a, second_float=float_b, result=division)
-    print(third_str)
+def divideFirstFloatBySecondFloat(first_float, second_float):
+    division = first_float / second_float
+    str_printOut = "{first_float:f} / {second_float:f} is {result:f}".format(first_float=first_float, second_float=second_float, result=division)
+    print(str_printOut)
 
-printHardCodedString()
-printSubstractionTwoIntegers(10, 3)
-printDivisionTwoFloats(1,3)
+hardCoded_string = "One half is 50%"
+printString(hardCoded_string)
+
+a_integer = -4
+b_integer = 3
+substractFirstIntFromSecondInt(a_integer, b_integer)
+
+a_float = 1
+b_float = 3
+divideFirstFloatBySecondFloat(a_float,b_float)

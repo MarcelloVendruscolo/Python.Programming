@@ -1,27 +1,29 @@
 #Exercise 02: Input
 #Author: Marcello Pietro Vendruscolo
 
-def inputAndPrintSumOfIntegers():
-    input_string1 = input("Give two integers: ")
-    a_integer = int(input_string1.split()[0])
-    b_integer = int(input_string1.split()[1])
-    sum = a_integer + b_integer
-    output_string1 = "You entered {first_int} and {second_int}, their sum is: {result}".format(first_int=a_integer, second_int=b_integer, result=sum)
-    print(output_string1)
+def computeSumOfTwoIntegers(first_int, second_int):
+    sum = first_int + second_int
+    string_printOut = "You entered {first_int} and {second_int}, their sum is: {result}".format(first_int=first_int, second_int=second_int, result=sum)
+    print(string_printOut)
 
-def inputAndPrintProductOfFloats():
-    input_string2 = input("Give two floats: ")
-    a_float = float(input_string2.split()[0])
-    b_float = float(input_string2.split()[1])
-    product = a_float * b_float
-    output_string2 = "You entered {first_float:f} and {second_float:f}, their sum is: {result:f}".format(first_float=a_float, second_float=b_float, result=product)
-    print(output_string2)
+def computeProductOfTwoFloats(first_float, second_float):
+    product = first_float * second_float
+    string_printOut = "You entered {first_float:f} and {second_float:f}, their product is: {result:f}".format(first_float=first_float, second_float=second_float, result=product)
+    print(string_printOut)
 
-def inputAndPrintTwiceAWord():
-    input_string3 = input("Give a word: ")
-    output_string3 = "{first_rep} {second_rep}".format(first_rep=input_string3, second_rep=input_string3)
-    print(output_string3)
+def printStringTwice(a_string):
+    string_printOut = "{first_rep} {second_rep}".format(first_rep=a_string, second_rep=a_string)
+    print(string_printOut)
 
-inputAndPrintSumOfIntegers()
-inputAndPrintProductOfFloats()
-inputAndPrintTwiceAWord()
+input_string = input("Give two integers: ")
+a_number = int(input_string.split()[0])
+b_number = int(input_string.split()[1])
+computeSumOfTwoIntegers(a_number, b_number)
+
+input_string = input("Give two floats: ")
+a_number = float(input_string.split()[0])
+b_number = float(input_string.split()[1])
+computeProductOfTwoFloats(a_number, b_number)
+
+input_string = input("Give a word: ")
+printStringTwice(input_string)

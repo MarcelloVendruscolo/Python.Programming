@@ -1,47 +1,51 @@
 #Exercise 03: Conditionals
 #Author: Marcello Pietro Vendruscolo
 
-
-def identifyZeroAsInput():
-    integer_inputString = input("Give an integer: ")
-    first_integer = int(integer_inputString)
-    if (first_integer == 0):
+def isThisNumberZero(a_number):
+    if (a_number == 0):
         print("The number you entered equals zero")
     else:
         print("The number you entered does not equal zero")
 
-def largestOfTwoFloats():
-    float_inputString = input("Give two floats: ")
-    a_float = float(float_inputString.split()[0])
-    b_float = float(float_inputString.split()[1])
-    if (a_float >= b_float):
-        output_string = "{float:f} is the largest".format(float=a_float)
+def largestOfTwoFloats(first_float, second_float):
+    if (first_float >= second_float):
+        string_printOut = "{float:f} is the largest".format(float=first_float)
     else:
-        output_string = "{float:f} is the largest".format(float=b_float)
-    print(output_string)
+        string_printOut = "{float:f} is the largest".format(float=second_float)
+    print(string_printOut)
 
-def divideOrMultipleInteger():
-    integer_inputString = input("Give an integer: ")
-    first_integer = int(integer_inputString)
-    if (first_integer % 2 == 0):
-        first_integer = first_integer // 2
+def divideIfEvenMultiplyIfOdd(a_integer):
+    if (a_integer % 2 == 0):
+        a_integer = a_integer // 2
     else:
-        first_integer = first_integer * 3
-    output_string = "Result is: {result}".format(result=first_integer)
-    print(output_string)
+        a_integer = a_integer * 3
+    string_printOut = "Result is: {result}".format(result=a_integer)
+    print(string_printOut)
 
-def identifyIdenticalIntegers():
-    input_string1 = input("Give three integers: ")
-    a_integer = int(input_string1.split()[0])
-    b_integer = int(input_string1.split()[1])
-    c_integer = int(input_string1.split()[2])
+def areThreeNumbersEqual(a_integer, b_integer, c_integer):
     if (a_integer == b_integer or a_integer == c_integer or b_integer == c_integer):
         print("Some numbers are equal")
     else:
         print("All are unique")
 
+def userInputAnInteger():
+    input_string = input("Give an integer: ")
+    a_number = int(input_string)
+    return(a_number)
 
-identifyZeroAsInput()
-largestOfTwoFloats()
-divideOrMultipleInteger()
-identifyIdenticalIntegers()
+a_number = userInputAnInteger()
+isThisNumberZero(a_number)
+
+input_string = input("Give two floats: ")
+a_float = float(input_string.split()[0])
+b_float = float(input_string.split()[1])
+largestOfTwoFloats(a_float, b_float)
+
+a_number = userInputAnInteger()
+divideIfEvenMultiplyIfOdd(a_number)
+
+input_string = input("Give three integers: ")
+a_number = int(input_string.split()[0])
+b_number = int(input_string.split()[1])
+c_number = int(input_string.split()[2])
+areThreeNumbersEqual(a_number, b_number, c_number)
