@@ -3,10 +3,8 @@
 
 def inputAndPrintSumOfIntegers():
     input_string1 = input("Give two integers: ")
-    if (input_string1.split()[0].isdigit()):
-        a_integer = int(input_string1.split()[0])
-    if (input_string1.split()[1].isdigit()):
-        b_integer = int(input_string1.split()[1])
+    a_integer = int(input_string1.split()[0])
+    b_integer = int(input_string1.split()[1])
     sum = a_integer + b_integer
     output_string1 = "You entered {first_int} and {second_int}, their sum is: {result}".format(first_int=a_integer, second_int=b_integer, result=sum)
     print(output_string1)
